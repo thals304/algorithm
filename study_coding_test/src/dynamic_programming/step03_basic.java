@@ -13,11 +13,18 @@ import java.util.Arrays;
  * 
  * (x,y) = [x,y] + Max (x+1, y) or (x+1, y+1)
  * */
+/*
+ * 느낀점
+ * 답안지에서는 y를 행으로 보고 있는데 나는 x를 행으로 보고 있어 높이에 대해 자꾸만 헷갈려지고 triangel[][]배열에서
+ * xy yx인지와 mem에서 xy yx인지까지 헷갈리게 되는 상황이 발생해서 분석과 이해에만 시간이 걸렸다.
+ * 다음에 다시 풀때는 이 점을 기억하면서 시간도 재면서 문제를 다시 풀어봐야겠다.
+ * */
 
 public class step03_basic {
 	private final static int[][] mem = new int[501][501];
 	
 	private static int max(int x, int y, int[][] triangle) {
+		// 종료조건
 		if (x == triangle.length) return 0; // 삼각형의 끝에 도달했을 때 0 반환 > 높이(행)과 관련
 		
 		if (mem[x][y] != -1) return mem[x][y];
