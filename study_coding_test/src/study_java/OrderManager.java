@@ -30,15 +30,16 @@ class OrderManagers {
 	private Queue<Order> orderQueue;
 	
 	public OrderManagers() {
-		this.orderQueue = new LinkedList<>(); // quque는 linkedlist로
+		this.orderQueue = new LinkedList<>(); // quque는 linkedlist로 선언
 	}
 	
 	public void placeOrder(int orderId, String product, int quantity) {
 		Order newOrder = new Order(orderId, product, quantity);
-		orderQueue.offer(newOrder); // 큐에 요소 추가
+		orderQueue.offer(newOrder); // 큐에 요소 추가 // .offer() vs .add()
 	}
 	public void processOrder() {
 		Order order = orderQueue.poll(); // 큐에서 가장 앞에 있는 요소를 제거하고 반환
+		
 		if (order != null) {
 			System.out.println(order.getOderId() + "," + order.getProduct() + "," + order.getQuantity());
 		}
@@ -47,7 +48,7 @@ class OrderManagers {
 		}
 	}
 	public int getTotalOrders() {
-		return orderQueue.size();
+		return orderQueue.size(); // .size()
 	}
 }
 public class OrderManager {
