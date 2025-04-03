@@ -45,7 +45,7 @@ class Main {
 		
 	}
 }
-public class step01_1_stack {
+public class step01_1_Stack {
 
 	public static void main(String[] args) {
 		Main T = new Main();
