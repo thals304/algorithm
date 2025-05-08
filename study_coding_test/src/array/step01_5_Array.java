@@ -27,7 +27,7 @@ class Main5{
 	public int solution(int n) {
 		int answer = 0; 
 		
-		int[] ch = new int[n + 1]; // 인덱스는 0부터 시작하므로 n번 인덱스까지 만들어야함
+		int[] ch = new int[n + 1]; // 인덱스는 0(사용x)부터 시작하므로 1~n번 인덱스까지 만들어야함 
 		
 		for(int i = 2; i <= n ; i++) {
 			if (ch[i] == 0) {
