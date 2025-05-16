@@ -8,8 +8,8 @@ public class Main {
         int n = sc.nextInt();
 
         Deque<Integer> dp = new ArrayDeque<>();
-        for (int i = 0; i < n; i++) {
-            dp.addLast(sc.nextInt());
+        for (int i = 1; i <= n; i++) {
+            dp.addLast(i);
         }
 
         while (dp.size() > 1) {
