@@ -5,23 +5,20 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
         // Please write your code here.
-        Stack<String> s = new Stack<>();
-        for(int x : str.toCharArray()){
+        Stack<Character> s = new Stack<>();
+        for(char x : str.toCharArray()){
             if (x == '(')
-                s.push("(");
+                s.push(x);
             else if (x == ')'){
-                if (!s.isEmpty()){
-                    s.pop();
+                if (s.isEmpty()){
+                    System.out.println("No");
+                    return;
                 }
+                s.pop();
             }
         }
 
-        if (!s.isEmpty()){
-            System.out.println("No");
-        }
-        else {
-            System.out.println("Yes");
-        }
+        System.out.println(s.isEmpty() ? "Yes" : "No");
 
     }
 }
